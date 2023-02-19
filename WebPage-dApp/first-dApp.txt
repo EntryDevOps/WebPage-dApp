@@ -1,0 +1,56 @@
+Contract Address:   0x24FE5E3E2102F28BC023C91979A0B4A3D837681D
+
+Contract ABI:
+
+[
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_mood",
+				"type": "string"
+			}
+		],
+		"name": "setMood",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getMood",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
+
+
+
+Contract hosted in Remix IDE Online:
+
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.1;
+
+contract MoodDiary{
+    //This is the contract's body, here you'll specify the logic for this contract
+
+    string mood;
+
+    //create a function that writes a mood to the smart contract
+    function setMood(string memory _mood) public {
+        mood= _mood;
+    }
+
+    //create a function that reads the mood from the smart contract
+    function getMood() public view returns(string memory) {
+        return mood;
+    }
+}
